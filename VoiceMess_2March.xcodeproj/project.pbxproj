@@ -1,0 +1,525 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BE0080861C8B5A2C0003D90D /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE0080851C8B5A2C0003D90D /* CloudKit.framework */; };
+		BEF9350A1C87409B00D1E056 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF935091C87409B00D1E056 /* AppDelegate.swift */; };
+		BEF9350C1C87409B00D1E056 /* RecordSoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF9350B1C87409B00D1E056 /* RecordSoundsViewController.swift */; };
+		BEF9350F1C87409B00D1E056 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEF9350D1C87409B00D1E056 /* Main.storyboard */; };
+		BEF935111C87409B00D1E056 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEF935101C87409B00D1E056 /* Assets.xcassets */; };
+		BEF935141C87409B00D1E056 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEF935121C87409B00D1E056 /* LaunchScreen.storyboard */; };
+		BEF9351F1C87409B00D1E056 /* VoiceMess_2MarchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF9351E1C87409B00D1E056 /* VoiceMess_2MarchTests.swift */; };
+		BEF9352A1C87409B00D1E056 /* VoiceMess_2MarchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF935291C87409B00D1E056 /* VoiceMess_2MarchUITests.swift */; };
+		BEF935381C875ADB00D1E056 /* RecordedAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF935371C875ADB00D1E056 /* RecordedAudio.swift */; };
+		BEF9353A1C875EC300D1E056 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEF935391C875EC300D1E056 /* AVFoundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BEF9351B1C87409B00D1E056 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BEF934FE1C87409B00D1E056 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BEF935051C87409B00D1E056;
+			remoteInfo = VoiceMess_2March;
+		};
+		BEF935261C87409B00D1E056 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BEF934FE1C87409B00D1E056 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BEF935051C87409B00D1E056;
+			remoteInfo = VoiceMess_2March;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BE0080851C8B5A2C0003D90D /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		BE185E9A1C9E349F00376B0B /* VoiceMess_2March.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = VoiceMess_2March.entitlements; sourceTree = "<group>"; };
+		BEF935061C87409B00D1E056 /* VoiceMess_2March.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VoiceMess_2March.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEF935091C87409B00D1E056 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BEF9350B1C87409B00D1E056 /* RecordSoundsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordSoundsViewController.swift; sourceTree = "<group>"; };
+		BEF9350E1C87409B00D1E056 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BEF935101C87409B00D1E056 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BEF935131C87409B00D1E056 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BEF935151C87409B00D1E056 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BEF9351A1C87409B00D1E056 /* VoiceMess_2MarchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VoiceMess_2MarchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEF9351E1C87409B00D1E056 /* VoiceMess_2MarchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceMess_2MarchTests.swift; sourceTree = "<group>"; };
+		BEF935201C87409B00D1E056 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BEF935251C87409B00D1E056 /* VoiceMess_2MarchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VoiceMess_2MarchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEF935291C87409B00D1E056 /* VoiceMess_2MarchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceMess_2MarchUITests.swift; sourceTree = "<group>"; };
+		BEF9352B1C87409B00D1E056 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BEF935371C875ADB00D1E056 /* RecordedAudio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordedAudio.swift; sourceTree = "<group>"; };
+		BEF935391C875EC300D1E056 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BEF935031C87409B00D1E056 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE0080861C8B5A2C0003D90D /* CloudKit.framework in Frameworks */,
+				BEF9353A1C875EC300D1E056 /* AVFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEF935171C87409B00D1E056 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEF935221C87409B00D1E056 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BEF934FD1C87409B00D1E056 = {
+			isa = PBXGroup;
+			children = (
+				BE0080851C8B5A2C0003D90D /* CloudKit.framework */,
+				BEF935391C875EC300D1E056 /* AVFoundation.framework */,
+				BEF935081C87409B00D1E056 /* VoiceMess_2March */,
+				BEF9351D1C87409B00D1E056 /* VoiceMess_2MarchTests */,
+				BEF935281C87409B00D1E056 /* VoiceMess_2MarchUITests */,
+				BEF935071C87409B00D1E056 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BEF935071C87409B00D1E056 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BEF935061C87409B00D1E056 /* VoiceMess_2March.app */,
+				BEF9351A1C87409B00D1E056 /* VoiceMess_2MarchTests.xctest */,
+				BEF935251C87409B00D1E056 /* VoiceMess_2MarchUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BEF935081C87409B00D1E056 /* VoiceMess_2March */ = {
+			isa = PBXGroup;
+			children = (
+				BE185E9A1C9E349F00376B0B /* VoiceMess_2March.entitlements */,
+				BEF935091C87409B00D1E056 /* AppDelegate.swift */,
+				BEF9350B1C87409B00D1E056 /* RecordSoundsViewController.swift */,
+				BEF9350D1C87409B00D1E056 /* Main.storyboard */,
+				BEF935371C875ADB00D1E056 /* RecordedAudio.swift */,
+				BEF935101C87409B00D1E056 /* Assets.xcassets */,
+				BEF935121C87409B00D1E056 /* LaunchScreen.storyboard */,
+				BEF935151C87409B00D1E056 /* Info.plist */,
+			);
+			path = VoiceMess_2March;
+			sourceTree = "<group>";
+		};
+		BEF9351D1C87409B00D1E056 /* VoiceMess_2MarchTests */ = {
+			isa = PBXGroup;
+			children = (
+				BEF9351E1C87409B00D1E056 /* VoiceMess_2MarchTests.swift */,
+				BEF935201C87409B00D1E056 /* Info.plist */,
+			);
+			path = VoiceMess_2MarchTests;
+			sourceTree = "<group>";
+		};
+		BEF935281C87409B00D1E056 /* VoiceMess_2MarchUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BEF935291C87409B00D1E056 /* VoiceMess_2MarchUITests.swift */,
+				BEF9352B1C87409B00D1E056 /* Info.plist */,
+			);
+			path = VoiceMess_2MarchUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BEF935051C87409B00D1E056 /* VoiceMess_2March */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BEF9352E1C87409B00D1E056 /* Build configuration list for PBXNativeTarget "VoiceMess_2March" */;
+			buildPhases = (
+				BEF935021C87409B00D1E056 /* Sources */,
+				BEF935031C87409B00D1E056 /* Frameworks */,
+				BEF935041C87409B00D1E056 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VoiceMess_2March;
+			productName = VoiceMess_2March;
+			productReference = BEF935061C87409B00D1E056 /* VoiceMess_2March.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BEF935191C87409B00D1E056 /* VoiceMess_2MarchTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BEF935311C87409B00D1E056 /* Build configuration list for PBXNativeTarget "VoiceMess_2MarchTests" */;
+			buildPhases = (
+				BEF935161C87409B00D1E056 /* Sources */,
+				BEF935171C87409B00D1E056 /* Frameworks */,
+				BEF935181C87409B00D1E056 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BEF9351C1C87409B00D1E056 /* PBXTargetDependency */,
+			);
+			name = VoiceMess_2MarchTests;
+			productName = VoiceMess_2MarchTests;
+			productReference = BEF9351A1C87409B00D1E056 /* VoiceMess_2MarchTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BEF935241C87409B00D1E056 /* VoiceMess_2MarchUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BEF935341C87409B00D1E056 /* Build configuration list for PBXNativeTarget "VoiceMess_2MarchUITests" */;
+			buildPhases = (
+				BEF935211C87409B00D1E056 /* Sources */,
+				BEF935221C87409B00D1E056 /* Frameworks */,
+				BEF935231C87409B00D1E056 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BEF935271C87409B00D1E056 /* PBXTargetDependency */,
+			);
+			name = VoiceMess_2MarchUITests;
+			productName = VoiceMess_2MarchUITests;
+			productReference = BEF935251C87409B00D1E056 /* VoiceMess_2MarchUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BEF934FE1C87409B00D1E056 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = susan.gooding;
+				TargetAttributes = {
+					BEF935051C87409B00D1E056 = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 8B9LC3ZY4B;
+					};
+					BEF935191C87409B00D1E056 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = BEF935051C87409B00D1E056;
+					};
+					BEF935241C87409B00D1E056 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = BEF935051C87409B00D1E056;
+					};
+				};
+			};
+			buildConfigurationList = BEF935011C87409B00D1E056 /* Build configuration list for PBXProject "VoiceMess_2March" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BEF934FD1C87409B00D1E056;
+			productRefGroup = BEF935071C87409B00D1E056 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BEF935051C87409B00D1E056 /* VoiceMess_2March */,
+				BEF935191C87409B00D1E056 /* VoiceMess_2MarchTests */,
+				BEF935241C87409B00D1E056 /* VoiceMess_2MarchUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BEF935041C87409B00D1E056 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEF935141C87409B00D1E056 /* LaunchScreen.storyboard in Resources */,
+				BEF935111C87409B00D1E056 /* Assets.xcassets in Resources */,
+				BEF9350F1C87409B00D1E056 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEF935181C87409B00D1E056 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEF935231C87409B00D1E056 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BEF935021C87409B00D1E056 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEF935381C875ADB00D1E056 /* RecordedAudio.swift in Sources */,
+				BEF9350C1C87409B00D1E056 /* RecordSoundsViewController.swift in Sources */,
+				BEF9350A1C87409B00D1E056 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEF935161C87409B00D1E056 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEF9351F1C87409B00D1E056 /* VoiceMess_2MarchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEF935211C87409B00D1E056 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEF9352A1C87409B00D1E056 /* VoiceMess_2MarchUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BEF9351C1C87409B00D1E056 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BEF935051C87409B00D1E056 /* VoiceMess_2March */;
+			targetProxy = BEF9351B1C87409B00D1E056 /* PBXContainerItemProxy */;
+		};
+		BEF935271C87409B00D1E056 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BEF935051C87409B00D1E056 /* VoiceMess_2March */;
+			targetProxy = BEF935261C87409B00D1E056 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BEF9350D1C87409B00D1E056 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BEF9350E1C87409B00D1E056 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BEF935121C87409B00D1E056 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BEF935131C87409B00D1E056 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BEF9352C1C87409B00D1E056 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BEF9352D1C87409B00D1E056 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BEF9352F1C87409B00D1E056 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = VoiceMess_2March/VoiceMess_2March.entitlements;
+				INFOPLIST_FILE = VoiceMess_2March/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "co.uk.susan.gooding.VoiceMess-2March";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BEF935301C87409B00D1E056 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = VoiceMess_2March/VoiceMess_2March.entitlements;
+				INFOPLIST_FILE = VoiceMess_2March/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "co.uk.susan.gooding.VoiceMess-2March";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		BEF935321C87409B00D1E056 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = VoiceMess_2MarchTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "co.uk.susan.gooding.VoiceMess-2MarchTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VoiceMess_2March.app/VoiceMess_2March";
+			};
+			name = Debug;
+		};
+		BEF935331C87409B00D1E056 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = VoiceMess_2MarchTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "co.uk.susan.gooding.VoiceMess-2MarchTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VoiceMess_2March.app/VoiceMess_2March";
+			};
+			name = Release;
+		};
+		BEF935351C87409B00D1E056 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = VoiceMess_2MarchUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "co.uk.susan.gooding.VoiceMess-2MarchUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = VoiceMess_2March;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		BEF935361C87409B00D1E056 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = VoiceMess_2MarchUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "co.uk.susan.gooding.VoiceMess-2MarchUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = VoiceMess_2March;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BEF935011C87409B00D1E056 /* Build configuration list for PBXProject "VoiceMess_2March" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BEF9352C1C87409B00D1E056 /* Debug */,
+				BEF9352D1C87409B00D1E056 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BEF9352E1C87409B00D1E056 /* Build configuration list for PBXNativeTarget "VoiceMess_2March" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BEF9352F1C87409B00D1E056 /* Debug */,
+				BEF935301C87409B00D1E056 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BEF935311C87409B00D1E056 /* Build configuration list for PBXNativeTarget "VoiceMess_2MarchTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BEF935321C87409B00D1E056 /* Debug */,
+				BEF935331C87409B00D1E056 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BEF935341C87409B00D1E056 /* Build configuration list for PBXNativeTarget "VoiceMess_2MarchUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BEF935351C87409B00D1E056 /* Debug */,
+				BEF935361C87409B00D1E056 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BEF934FE1C87409B00D1E056 /* Project object */;
+}
