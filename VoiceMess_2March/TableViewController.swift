@@ -1,163 +1,106 @@
-////
-////  TableViewController.swift
-////  VoiceMess_2March
-////
-////  Created by s gooding on 30/03/2016.
-////  Copyright © 2016 susan.gooding. All rights reserved.
-////
 //
-//import UIKit
-//import CloudKit
+//  TableViewController.swift
+//  CellButtons
 //
-//class TableViewController: UITableViewController {
-//    
-//    var db:CKDatabase!
-//    //var razeware:[CKRecord] = []
-//    //var itemRecord:[CKRecord] = []
-//     var inRecord:[CKRecord] = []
-//    var backgroundQueue:NSOperationQueue
-//    
-//    required init?(coder aDecoder: NSCoder) {
-//        //inRecords = []
-//        backgroundQueue = NSOperationQueue()
-//        super.init(coder: aDecoder)
+//  Created by Jure Zove on 20/09/15.
+//  Copyright © 2015 Candy Code. All rights reserved.
+////http://candycode.io/how-to-properly-do-buttons-in-table-view-cells/
+//
+import AVFoundation
+import UIKit
+import CloudKit
+
+class TableViewController: UITableViewController, ButtonCellDelegate, AVAudioRecorderDelegate {
+    var recordedAudio:RecordedAudio! //model
+    var audioPlayer:AVAudioPlayer!
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    // MARK: - Table view data source
+
+    func testSound() {
+     // Grab the path, make sure to add it to your project!
+    let helloSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("hello", ofType: "wav")!)
+    var audioPlayer = AVAudioPlayer()
+
+    // Initial setup
+        do {
+     try!   audioPlayer = AVAudioPlayer(contentsOfURL: helloSound, fileTypeHint: nil)
+        
+        audioPlayer.prepareToPlay()
+   
+   // } catch _ {
+    
+    }
+    
+    // Trigger the sound effect when the player grabs the coin
+  
+        audioPlayer.play()
+    
+
+
+
+}
+    
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 4
+    }
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("ButtonCell", forIndexPath: indexPath) as! ButtonCell
+        
+        cell.rowLabel.text = "\(indexPath.row)"
+        if cell.buttonDelegate == nil {
+            cell.buttonDelegate = self
+        }
+        
+        return cell
+    }
+        // MARK: - ButtonCellDelegate
+    func setupPlayer(){
+       let audioSession = AVAudioSession.sharedInstance()
+       do {
+       try audioSession.setActive(false)
+       } catch _ {
+       }
+       //audioPlayer = try? AVAudioPlayer(contentsOfURL: recordedAudio.filePathUrl)//??????????
+       //audioPlayer.enableRate = true
+    }
+    
+    
+    func cellTapped(cell: ButtonCell) {
+       
+        setupPlayer()
+        //audioPlayer.play()
+         testSound()
+        //self.showAlertForRow(tableView.indexPathForCell(cell)!.row)
+    }
+    
+    // MARK: - Extracted method
+    
+//    func showAlertForRow(row: Int) {
+//        let alert = UIAlertController(
+//            title: "BEHOLD",
+//            message: "Cell at row \(row) was tapped!",
+//            preferredStyle: .Alert)
+//        alert.addAction(UIAlertAction(title: "Gotcha!", style: UIAlertActionStyle.Default, handler: { (test) -> Void in
+//            self.dismissViewControllerAnimated(true, completion: nil)
+//        }))
+//        
+//        self.presentViewController(
+//            alert,
+//            animated: true,
+//            completion: nil)
 //    }
-//    override func viewDidLoad() {
-//        
-//        
-//        super.viewDidLoad()
-//
-//        // Uncomment the following line to preserve selection between presentations
-//        // self.clearsSelectionOnViewWillAppear = false
-//
-//        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-//        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-//        
-//        db = CKContainer.defaultContainer().publicCloudDatabase
-//
-//            let predicate = NSPredicate(value: true)
-//            //let predicate = NSPredicate(format: "atext CONTAINS '3:12'")
-//            let query = CKQuery(recordType: "Messages", predicate: predicate)
-//            
-//            
-//            
-//            db.performQuery(query, inZoneWithID: nil) {
-//                records, error in
-//                if error != nil {
-//                    print(error!.localizedDescription)
-//                } else{
-//                    for inRecords in records!{
-//                        self.inRecord.append(inRecords as CKRecord)
-//                    }
-//                    let queue = NSOperationQueue.mainQueue()
-//                    queue.addOperationWithBlock() {
-//                        self.tableView.reloadData()
-//                    }
-//                }
-//        }
-//
-//    }//vdl
-//
-//    override func didReceiveMemoryWarning() {
-//        super.didReceiveMemoryWarning()
-//        // Dispose of any resources that can be recreated.
-//    }
-//
-//    // MARK: - Table view data source
-//
-//    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-//        // #warning Incomplete implementation, return the number of sections
-//        return 0
-//    }
-//
-//    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        // #warning Incomplete implementation, return the number of rows
-//        return 0
-//    }
-//
-//   
-//    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-//        
-//       // let cell = tableView.dequeueReusableCellWithIdentifier("Cell") as! CellTableViewCell
-//        let ckRecord = inRecord[indexPath.row]
-//        let Name = ckRecord.objectForKey("atext") as! String
-//                Cell.name.text = Name
-//        
-//        weak var weakCell = Cell
-//        backgroundQueue.addOperationWithBlock() {
-//            //let image = ckRecord.objectForKey("Photo") as CKAsset!
-//            if let ckAsset = audio {
-//                if let url = ckAsset.fileURL {
-//                    let audioData = NSData(contentsOfURL:url)
-//                    let mainQueue = NSOperationQueue.mainQueue()
-//                    mainQueue.addOperationWithBlock() {
-//                        cell.photo.image = UIImage(data: imageData!)
-//                    }
-//                    
-//                }
-//            }
-//        }
-//        
-//        
-//        
-//        return cell
-//    }
-//
-//        
-//        
-//        
-//        
-////        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
-////        let ckRecord = record[indexPath.row]
-////        let atext.ckRecord.objectForKey("atext") as String
-////        cell.name.text = atext
-////        return cell
-////    }
-//   
-//
-//    /*
-//    // Override to support conditional editing of the table view.
-//    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-//        // Return false if you do not want the specified item to be editable.
-//        return true
-//    }
-//    */
-//
-//    /*
-//    // Override to support editing the table view.
-//    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-//        if editingStyle == .Delete {
-//            // Delete the row from the data source
-//            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-//        } else if editingStyle == .Insert {
-//            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-//        }    
-//    }
-//    */
-//
-//    /*
-//    // Override to support rearranging the table view.
-//    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-//
-//    }
-//    */
-//
-//    /*
-//    // Override to support conditional rearranging of the table view.
-//    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-//        // Return false if you do not want the item to be re-orderable.
-//        return true
-//    }
-//    */
-//
-//    /*
-//    // MARK: - Navigation
-//
-//    // In a storyboard-based application, you will often want to do a little preparation before navigation
-//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        // Get the new view controller using segue.destinationViewController.
-//        // Pass the selected object to the new view controller.
-//    }
-//    */
-//
-//}
+}

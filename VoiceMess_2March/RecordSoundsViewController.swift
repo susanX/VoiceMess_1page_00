@@ -4,7 +4,7 @@
 //
 //  Created by s gooding on 02/03/2016.
 //  Copyright © 2016 susan.gooding. All rights reserved.
-//
+//  note update number in uniqueReference before running
 
 import UIKit
 import AVFoundation
@@ -166,36 +166,83 @@ class RecordSoundsViewController: UIViewController,AVAudioRecorderDelegate {
         //let itemRecord =         CKRecord["title"] = "Msg"
         //let audioRecord:CKRecord = CKRecord( recordType: "Photo", recordID: photoRecordID)
         
-        //let uniqueReference = "sg13"
-        let uniqueReference = NSUUID().UUIDString
-        let uniqueRecordID = CKRecordID(recordName: uniqueReference)
+        let uniqueReference = "sg63"
         
+//        let uniqueReference = NSUUID().UUIDString
+       let uniqueRecordID = CKRecordID(recordName: uniqueReference)
         
         let itemRecord: CKRecord = CKRecord(recordType: "Messages", recordID:uniqueRecordID)//, recordID:itemRecordID)
         //let itemRecord["usermsg"] = "sg"
-        
-        
-        
-        
-        
         let audioURL = recordedAudio.filePathUrl
         let file:CKAsset? =        CKAsset(fileURL: audioURL)//fileURL is type NSURL
         //let itemRecordID =        CKRecordID(recordName: uuid)//fileURL is type NSURL
+//        itemRecord.setValue(file,         forKey: "AudioFile")//@@
+//        itemRecord.setValue(tAdd.text,    forKey: "atext") //displ
+//        
+        itemRecord["AudioFile"] = file
+        itemRecord["atext"] = tAdd.text
         
-        itemRecord.setValue(file,         forKey: "AudioFile")//@@
-        itemRecord.setValue(tAdd.text,    forKey: "atext") //displays by this field ascending
-        // itemRecord.setValue(itemRecordID, forkey: "recordName")
+        
+//        itemRecord.setValue(file,         forKey: "AudioFile")//@@
+//        itemRecord.setValue(tAdd.text,    forKey: "atext") //displays by this field ascending
+//        // itemRecord.setValue(itemRecordID, forkey: "recordName")
         // itemRecord.setValue(itemRecordID, forKey: "Record Name")
         
         db.saveRecord(itemRecord) {(record:CKRecord?, error:NSError?) -> Void in
             if error == nil {
                 print("audio saved!")
                 NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
-                    self.tAdd.text = "gone to CloudKit"
+                    self.tAdd.text = "Message sent"
                 })
             }
         }
     }
+    
+    
+    
+/////////////
+    
+    @IBAction func playAsset(sender: AnyObject) {
+        // Fetch the Sound data set
+        
+       
+        
+        let predicate = NSPredicate(value: true)
+        
+        let myQuery = CKQuery(recordType: "Messages", predicate: predicate)
+        //db.fetchRecordWithID("sg59")
+        //db.fetchRecordWithID(sg59)
+        //REF TO DB, call PERFORM QUERY, PASS IN QUERY OBJECT, zone (caped at 200 records)
+        
+        db.performQuery(myQuery, inZoneWithID: nil){
+            records, error in
+            if error != nil{
+                print(error!.localizedDescription)
+            }else {
+
+            if let asset = NSDataAsset(name:"AudioFile") {
+            print("I have the audiofile")
+            do {
+                // Use NSDataAsset's data property to access the audio file stored in Sound
+                try self.audioPlayer = AVAudioPlayer(data:asset.data, fileTypeHint:"wav")
+                // Play the above sound file
+                self.audioPlayer.play()
+            } catch let error as NSError {
+                print(error.localizedDescription)
+            }
+        }
+    }
+        }
+    }
+    
+//////
+    
+    
+    
+    
+    
+    
+    
     
     
     @IBAction func fetchAsset(sender: AnyObject) {
@@ -204,25 +251,8 @@ class RecordSoundsViewController: UIViewController,AVAudioRecorderDelegate {
     }
     func fetchMyAsset(){
         /////FETCH///////////////
-        //1. ////
-        
-        // db = CKContainer.defaultContainer().publicCloudDatabase
-        
-        
-        
-        //  let greatID = CKRecordID(recordName: "boo")
-        
-        // db.fetchRecordWithID(greatID) { fetchedPlace, error in
-        // handle errors here
-        //print(greatID)//<CKRecordID: 0x7ffdb362c520; boo:(_defaultZone:__defaultOwner__)>
-        //PREDICATE
-        //CREATE A CKQUERY OBJECT  WITH A RECORD TYPE "Messages" (SORT DESCRIPTOR HERE)
-        
-        
-        //let predicate = NSPredicate(format: "atext BEGINSWITH 'blue'")
-        //let predicate = NSPredicate(format: "Created: = '28'")
-        
-        let predicate = NSPredicate(value: true)
+               
+       let predicate = NSPredicate(value: true)
         
         let myQuery = CKQuery(recordType: "Messages", predicate: predicate)
         
@@ -236,7 +266,20 @@ class RecordSoundsViewController: UIViewController,AVAudioRecorderDelegate {
                 print(error!.localizedDescription)
             }else {
                 
+                
+                
                 for element in records! {
+                    if let asset = NSDataAsset(name: "Messages") {
+                        print("asset")
+                        
+                        let data = asset.data
+                        //print(data)
+                        self.audioPlayer = try! AVAudioPlayer(data:data)
+                        self.audioPlayer.play()
+                    }
+                    
+                    
+                    
                     //self.itemRecord.append(element as CKRecord)
                     self.itemRecord.append(element as CKRecord)
                     
@@ -244,6 +287,11 @@ class RecordSoundsViewController: UIViewController,AVAudioRecorderDelegate {
                     //print(CKAsset(fileURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("temporary", ofType: "wav")!)))
                     
                 }
+                
+                
+                
+                
+                
                 
                 
                 var aList:[String]=[]

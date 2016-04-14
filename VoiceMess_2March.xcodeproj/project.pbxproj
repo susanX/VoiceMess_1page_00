@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		BE0080861C8B5A2C0003D90D /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE0080851C8B5A2C0003D90D /* CloudKit.framework */; };
+		BE0623D11CBFBBCF008CF99A /* hello.wav in Resources */ = {isa = PBXBuildFile; fileRef = BE0623D01CBFBBCF008CF99A /* hello.wav */; };
+		BEA3406D1CBE9D9400BB1AF4 /* ButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA3406C1CBE9D9400BB1AF4 /* ButtonCell.swift */; };
+		BEA3406F1CBE9DEC00BB1AF4 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = BEA3406E1CBE9DEC00BB1AF4 /* play.png */; };
+		BEA340711CBEA35500BB1AF4 /* ladybug.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BEA340701CBEA35500BB1AF4 /* ladybug.jpg */; };
+		BEA340731CBEA36200BB1AF4 /* grasshopper.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BEA340721CBEA36200BB1AF4 /* grasshopper.jpg */; };
+		BEA340751CBEA36A00BB1AF4 /* giantMoth.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BEA340741CBEA36A00BB1AF4 /* giantMoth.jpg */; };
+		BEA340771CBEA37D00BB1AF4 /* bee.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BEA340761CBEA37D00BB1AF4 /* bee.jpg */; };
+		BEA340791CBEA39300BB1AF4 /* ScaryBug.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA340781CBEA39300BB1AF4 /* ScaryBug.swift */; };
 		BEC6B44C1CAB4A7C00B35656 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC6B44B1CAB4A7C00B35656 /* TableViewController.swift */; };
 		BEF9350A1C87409B00D1E056 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF935091C87409B00D1E056 /* AppDelegate.swift */; };
 		BEF9350C1C87409B00D1E056 /* RecordSoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF9350B1C87409B00D1E056 /* RecordSoundsViewController.swift */; };
@@ -39,7 +47,15 @@
 
 /* Begin PBXFileReference section */
 		BE0080851C8B5A2C0003D90D /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		BE0623D01CBFBBCF008CF99A /* hello.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = hello.wav; sourceTree = "<group>"; };
 		BE185E9A1C9E349F00376B0B /* VoiceMess_2March.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = VoiceMess_2March.entitlements; sourceTree = "<group>"; };
+		BEA3406C1CBE9D9400BB1AF4 /* ButtonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ButtonCell.swift; path = "../../../../Downloads/buttoned-up-cells-master/CellButtons/ButtonCell.swift"; sourceTree = "<group>"; };
+		BEA3406E1CBE9DEC00BB1AF4 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
+		BEA340701CBEA35500BB1AF4 /* ladybug.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ladybug.jpg; sourceTree = "<group>"; };
+		BEA340721CBEA36200BB1AF4 /* grasshopper.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = grasshopper.jpg; sourceTree = "<group>"; };
+		BEA340741CBEA36A00BB1AF4 /* giantMoth.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = giantMoth.jpg; sourceTree = "<group>"; };
+		BEA340761CBEA37D00BB1AF4 /* bee.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bee.jpg; sourceTree = "<group>"; };
+		BEA340781CBEA39300BB1AF4 /* ScaryBug.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScaryBug.swift; sourceTree = "<group>"; };
 		BEC6B44B1CAB4A7C00B35656 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		BEF935061C87409B00D1E056 /* VoiceMess_2March.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VoiceMess_2March.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEF935091C87409B00D1E056 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +101,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BEA3407A1CBEA3C900BB1AF4 /* Challenge Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BEA340781CBEA39300BB1AF4 /* ScaryBug.swift */,
+				BEA340761CBEA37D00BB1AF4 /* bee.jpg */,
+				BEA340701CBEA35500BB1AF4 /* ladybug.jpg */,
+				BE0623D01CBFBBCF008CF99A /* hello.wav */,
+				BEA340721CBEA36200BB1AF4 /* grasshopper.jpg */,
+				BEA340741CBEA36A00BB1AF4 /* giantMoth.jpg */,
+			);
+			name = "Challenge Resources";
+			sourceTree = "<group>";
+		};
 		BEF934FD1C87409B00D1E056 = {
 			isa = PBXGroup;
 			children = (
@@ -112,11 +141,14 @@
 			children = (
 				BE185E9A1C9E349F00376B0B /* VoiceMess_2March.entitlements */,
 				BEF935091C87409B00D1E056 /* AppDelegate.swift */,
+				BEA3406C1CBE9D9400BB1AF4 /* ButtonCell.swift */,
+				BEA3407A1CBEA3C900BB1AF4 /* Challenge Resources */,
 				BEF9350B1C87409B00D1E056 /* RecordSoundsViewController.swift */,
 				BEF9350D1C87409B00D1E056 /* Main.storyboard */,
 				BEC6B44B1CAB4A7C00B35656 /* TableViewController.swift */,
 				BEF935371C875ADB00D1E056 /* RecordedAudio.swift */,
 				BEF935101C87409B00D1E056 /* Assets.xcassets */,
+				BEA3406E1CBE9DEC00BB1AF4 /* play.png */,
 				BEF935121C87409B00D1E056 /* LaunchScreen.storyboard */,
 				BEF935151C87409B00D1E056 /* Info.plist */,
 			);
@@ -247,7 +279,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEF935141C87409B00D1E056 /* LaunchScreen.storyboard in Resources */,
+				BEA3406F1CBE9DEC00BB1AF4 /* play.png in Resources */,
+				BEA340771CBEA37D00BB1AF4 /* bee.jpg in Resources */,
+				BE0623D11CBFBBCF008CF99A /* hello.wav in Resources */,
 				BEF935111C87409B00D1E056 /* Assets.xcassets in Resources */,
+				BEA340711CBEA35500BB1AF4 /* ladybug.jpg in Resources */,
+				BEA340751CBEA36A00BB1AF4 /* giantMoth.jpg in Resources */,
+				BEA340731CBEA36200BB1AF4 /* grasshopper.jpg in Resources */,
 				BEF9350F1C87409B00D1E056 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,7 +314,9 @@
 				BEF935381C875ADB00D1E056 /* RecordedAudio.swift in Sources */,
 				BEF9350C1C87409B00D1E056 /* RecordSoundsViewController.swift in Sources */,
 				BEF9350A1C87409B00D1E056 /* AppDelegate.swift in Sources */,
+				BEA3406D1CBE9D9400BB1AF4 /* ButtonCell.swift in Sources */,
 				BEC6B44C1CAB4A7C00B35656 /* TableViewController.swift in Sources */,
+				BEA340791CBEA39300BB1AF4 /* ScaryBug.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
