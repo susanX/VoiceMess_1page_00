@@ -166,7 +166,7 @@ class RecordSoundsViewController: UIViewController,AVAudioRecorderDelegate {
         //let itemRecord =         CKRecord["title"] = "Msg"
         //let audioRecord:CKRecord = CKRecord( recordType: "Photo", recordID: photoRecordID)
         
-        let uniqueReference = "sg63"
+        let uniqueReference = "sg70"
         
 //        let uniqueReference = NSUUID().UUIDString
        let uniqueRecordID = CKRecordID(recordName: uniqueReference)

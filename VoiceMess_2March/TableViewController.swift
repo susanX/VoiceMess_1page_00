@@ -11,6 +11,7 @@ import UIKit
 import CloudKit
 
 class TableViewController: UITableViewController, ButtonCellDelegate, AVAudioRecorderDelegate {
+    
     var recordedAudio:RecordedAudio! //model
     var audioPlayer:AVAudioPlayer!
 
@@ -32,7 +33,7 @@ class TableViewController: UITableViewController, ButtonCellDelegate, AVAudioRec
 
     // Initial setup
         do {
-     try!   audioPlayer = AVAudioPlayer(contentsOfURL: helloSound, fileTypeHint: nil)
+     try!   audioPlayer = AVAudioPlayer(contentsOfURL: helloSound, fileTypeHint: "wav")
         
         audioPlayer.prepareToPlay()
    
@@ -58,13 +59,18 @@ class TableViewController: UITableViewController, ButtonCellDelegate, AVAudioRec
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("ButtonCell", forIndexPath: indexPath) as! ButtonCell
         
+        
+        
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier("ButtonCell", forIndexPath: indexPath) as! ButtonCell
+        testSound()
         cell.rowLabel.text = "\(indexPath.row)"
         if cell.buttonDelegate == nil {
             cell.buttonDelegate = self
         }
-        
+        //var audioPath = NSString(string: NSBundle.mainBundle().pathForResource(currentItem.hello, ofType: "mp3"))
+
         return cell
     }
         // MARK: - ButtonCellDelegate
